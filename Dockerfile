@@ -8,5 +8,5 @@ RUN CGO_ENABLED=0 GOOS=linux go build -o /service2
 FROM alpine:3.14 AS release
 WORKDIR /
 COPY --from=base-stage /service2 /service2
-EXPOSE 3001
+EXPOSE 3002
 ENTRYPOINT [ "/service2" ]
